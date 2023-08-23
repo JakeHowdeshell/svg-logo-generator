@@ -1,8 +1,9 @@
+// imported dependencies
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
 const { Shapes, Circle, Triangle, Square } = require("./lib/shapes.js");
-
+// promting the user to provide data used to create the image
 inquirer
   .prompt([
     {
@@ -64,6 +65,7 @@ inquirer
       name: "shapeColor",
     },
   ])
+  // using the user data to define which class will be used to generate the image
   .then(function (data) {
     let newShape;
     switch (data.shape) {
@@ -80,15 +82,9 @@ inquirer
         console.error("Invalid shape choice");
         return;
     }
+    // writing the file to the examples folder under the name logo.svg
     const outputFolder = path.join(__dirname, "examples", "logo.svg");
     fs.writeFile(outputFolder, newShape, (err) =>
       err ? console.error(err) : console.log("Generated logo.svg")
     );
   });
-//   .catch((error) => {
-//     if (error.isTtyError) {
-//       // Prompt couldn't be rendered in the current environment
-//     } else {
-//       // Something else went wrong
-//     }
-//   });
