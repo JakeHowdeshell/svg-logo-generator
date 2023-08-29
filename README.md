@@ -52,7 +52,7 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 After running "node index.js" on the command line the user is promted with a series of questions that require them to provide an input or select from a list of items to generate an SVG image that can be used for a logo.
 
-Video Example: https://watch.screencastify.com/v/JpaFJkZ2FMWb6MjmqWk0
+Video Example: https://watch.screencastify.com/v/lKm25vlA4rz58seBqKFC
 
 ![Screenshot](images/Screenshot.png)
 
